@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Exercícios JavaScript</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#" onclick="showExercise('home')">Início</a></li>
+                <li><a href="#" onclick="showExercise('media')">Média do Aluno</a></li>
+                <li><a href="#" onclick="showExercise('conversor')">Conversor de Moedas</a></li>
+                <li><a href="#" onclick="showExercise('adivinhacao')">Jogo de Adivinhação</a></li>
+                <li><a href="#" onclick="showExercise('tabuada')">Tabuada</a></li>
+                <li><a href="#" onclick="showExercise('fatorial')">Fatorial</a></li>
+                <li><a href="#" onclick="showExercise('imc')">Calculadora IMC</a></li>
+                <li><a href="#" onclick="showExercise('bissexto')">Ano Bissexto</a></li>
+                <li><a href="#" onclick="showExercise('quiz')">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Página Inicial -->
+        <section id="home" class="exercise-section active">
+            <h2>Bem-vindo aos Exercícios JavaScript</h2>
+            <div class="exercise-grid">
+                <div class="exercise-card" onclick="showExercise('media')">
+                    <h3>Média do Aluno</h3>
+                    <p>Calcule a média de três notas e determine a situação do aluno</p>
+                </div>
+                <div class="exercise-card" onclick="showExercise('conversor')">
+                    <h3>Conversor de Moedas</h3>
+                    <p>Converta Real para Dólar, Euro, Libra e Bitcoin</p>
+                </div>
+                <div class="exercise-card" onclick="showExercise('adivinhacao')">
+                    <h3>Jogo de Adivinhação</h3>
+                    <p>Adivinhe o número entre 1 e 100 com dicas</p>
+                </div>
+                <div class="exercise-card" onclick="showExercise('tabuada')">
+                    <h3>Tabuada</h3>
+                    <p>Gere a tabuada de qualquer número</p>
+                </div>
+                <div class="exercise-card" onclick="showExercise('fatorial')">
+                    <h3>Fatorial</h3>
+                    <p>Calcule o fatorial de um número</p>
+                </div>
+                <div class="exercise-card" onclick="showExercise('imc')">
+                    <h3>Calculadora IMC</h3>
+                    <p>Calcule seu Índice de Massa Corporal</p>
+                </div>
+                <div class="exercise-card" onclick="showExercise('bissexto')">
+                    <h3>Ano Bissexto</h3>
+                    <p>Verifique se um ano é bissexto</p>
+                </div>
+                <div class="exercise-card" onclick="showExercise('quiz')">
+                    <h3>Quiz</h3>
+                    <p>Responda 5 perguntas aleatórias</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercício 1: Média do Aluno -->
+        <section id="media" class="exercise-section">
+            <h2>Média do Aluno</h2>
+            <div class="form-container">
+                <div class="input-group">
+                    <label for="nota1">Primeira Nota:</label>
+                    <input type="number" id="nota1" step="0.1" min="0" max="10" placeholder="0.0">
+                </div>
+                <div class="input-group">
+                    <label for="nota2">Segunda Nota:</label>
+                    <input type="number" id="nota2" step="0.1" min="0" max="10" placeholder="0.0">
+                </div>
+                <div class="input-group">
+                    <label for="nota3">Terceira Nota:</label>
+                    <input type="number" id="nota3" step="0.1" min="0" max="10" placeholder="0.0">
+                </div>
+                <button onclick="calcularMedia()">Calcular Média</button>
+                <div id="resultado-media" class="resultado"></div>
+            </div>
+        </section>
+
+        <!-- Exercício 2: Conversor de Moedas -->
+        <section id="conversor" class="exercise-section">
+            <h2>Conversor de Moedas</h2>
+            <div class="form-container">
+                <div class="input-group">
+                    <label for="valor-real">Valor em Real (R$):</label>
+                    <input type="number" id="valor-real" step="0.01" min="0" placeholder="0.00">
+                </div>
+                <div class="input-group">
+                    <label for="tipo-conversao">Converter para:</label>
+                    <select id="tipo-conversao">
+                        <option value="dolar">Dólar (USD)</option>
+                        <option value="euro">Euro (EUR)</option>
+                        <option value="libra">Libra (GBP)</option>
+                        <option value="bitcoin">Bitcoin (BTC)</option>
+                    </select>
+                </div>
+                <button onclick="converterMoeda()">Converter</button>
+                <div id="resultado-conversao" class="resultado"></div>
+            </div>
+        </section>
+
+        <!-- Exercício 3: Jogo de Adivinhação -->
+        <section id="adivinhacao" class="exercise-section">
+            <h2>Jogo de Adivinhação</h2>
+            <div class="form-container">
+                <div class="game-info">
+                    <p>Tente adivinhar o número entre 1 e 100!</p>
+                    <p>Tentativas: <span id="tentativas">0</span></p>
+                </div>
+                <div class="input-group">
+                    <label for="palpite">Seu palpite:</label>
+                    <input type="number" id="palpite" min="1" max="100" placeholder="Digite um número">
+                </div>
+                <button onclick="verificarPalpite()">Tentar</button>
+                <button onclick="iniciarJogo()">Novo Jogo</button>
+                <div id="resultado-jogo" class="resultado"></div>
+            </div>
+        </section>
+
+        <!-- Exercício 4: Tabuada -->
+        <section id="tabuada" class="exercise-section">
+            <h2>Tabuada</h2>
+            <div class="form-container">
+                <div class="input-group">
+                    <label for="numero-tabuada">Número para a tabuada:</label>
+                    <input type="number" id="numero-tabuada" placeholder="Digite um número">
+                </div>
+                <button onclick="gerarTabuada()">Gerar Tabuada</button>
+                <div id="resultado-tabuada" class="resultado"></div>
+            </div>
+        </section>
+
+        <!-- Exercício 5: Fatorial -->
+        <section id="fatorial" class="exercise-section">
+            <h2>Fatorial</h2>
+            <div class="form-container">
+                <div class="input-group">
+                    <label for="numero-fatorial">Número para calcular o fatorial:</label>
+                    <input type="number" id="numero-fatorial" min="0" placeholder="Digite um número">
+                </div>
+                <button onclick="calcularFatorial()">Calcular Fatorial</button>
+                <div id="resultado-fatorial" class="resultado"></div>
+            </div>
+        </section>
+
+        <!-- Exercício 6: IMC -->
+        <section id="imc" class="exercise-section">
+            <h2>Calculadora IMC</h2>
+            <div class="form-container">
+                <div class="input-group">
+                    <label for="peso">Peso (kg):</label>
+                    <input type="number" id="peso" step="0.1" min="0" placeholder="70.0">
+                </div>
+                <div class="input-group">
+                    <label for="altura">Altura (m):</label>
+                    <input type="number" id="altura" step="0.01" min="0" placeholder="1.75">
+                </div>
+                <button onclick="calcularIMC()">Calcular IMC</button>
+                <div id="resultado-imc" class="resultado"></div>
+            </div>
+        </section>
+
+        <!-- Exercício 7: Ano Bissexto -->
+        <section id="bissexto" class="exercise-section">
+            <h2>Ano Bissexto</h2>
+            <div class="form-container">
+                <div class="input-group">
+                    <label for="ano">Ano:</label>
+                    <input type="number" id="ano" min="1" placeholder="2024">
+                </div>
+                <button onclick="verificarBissexto()">Verificar</button>
+                <div id="resultado-bissexto" class="resultado"></div>
+            </div>
+        </section>
+
+        <!-- Exercício 8: Quiz -->
+        <section id="quiz" class="exercise-section">
+            <h2>Quiz</h2>
+            <div class="form-container">
+                <div id="quiz-container">
+                    <button onclick="iniciarQuiz()">Iniciar Quiz</button>
+                    <div id="pergunta-container" class="pergunta-container" style="display: none;">
+                        <div class="quiz-info">
+                            <p>Pergunta <span id="pergunta-atual">1</span> de 5</p>
+                            <p>Acertos: <span id="acertos">0</span></p>
+                        </div>
+                        <div id="pergunta-texto" class="pergunta-texto"></div>
+                        <div id="alternativas" class="alternativas"></div>
+                        <button id="proxima-pergunta" onclick="proximaPergunta()" style="display: none;">Próxima Pergunta</button>
+                    </div>
+                    <div id="resultado-quiz" class="resultado"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
