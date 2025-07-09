@@ -1,0 +1,46 @@
+{
+  "produtos": [
+    {
+      "id": "1479",
+      "nome": "TV",
+      "marca": "Samsung",
+      "valor": 4300
+    },
+    {
+      "id": "78a0",
+      "nome": "TV",
+      "marca": "Samsung",
+      "valor": 4300
+    },
+    {
+      "id": "dbaf",
+      "nome": "TV",
+      "marca": "Samsung",
+      "valor": 4300
+    },
+    {
+      "id": "b490",
+      "nome": "TV",
+      "marca": "Samsung",
+      "valor": 4300
+    },
+    {
+      "id": "f770",
+      "nome": "TV",
+      "marca": "Samsung",
+      "valor": 4300
+    },
+    {
+      "id": "4369",
+      "nome": "Monitor Gamer",
+      "marca": "LG",
+      "valor": 2400
+    },
+    {
+      "id": "7c17",
+      "nome": "Monitor Gamer",
+      "marca": "LG",
+      "valor": 2400
+    }
+  ]
+}

@@ -23,16 +23,19 @@
                 DELETE: Remover.
         */
 
-        
-
-        let produto = {
+        fetch('https://jsonplaceholder.typicode.com/posts',)
+            // se eu quiser mudar algo usamos: method: 'DELETE' ou 'GET' ou 'PUT' ou 'PATCH'.
+            //reposta do servidor;
+            .then(retorno => retorno.json())
+            .then(postagens => console.table(postagens))
+        /* let produto = {
             nome: 'TV',
             valor: 4800,
             marca: 'Samsung',
             descricao: 'TV Samsung 43 polegadas de alta resolução.'
         }
 
-        amazon.com.br / produtos / 1 < - DELETE
+        amazon.com.br / produtos / 1 < - DELETE */
         
     </script>
 </body>
