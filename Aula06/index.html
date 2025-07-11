@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- ... -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Endereços | Aula06</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<!-- ... -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/feather-icons"></script>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .glass {
+        background: rgba(30, 41, 59, 0.85);
+        backdrop-filter: blur(32px);
+        border-radius: 2rem;
+        border: 2px solid rgba(34, 211, 238, 0.15);
+        box-shadow: 0 12px 48px 0 rgba(34, 211, 238, 0.12), 0 1.5px 8px 0 rgba(16, 185, 129, 0.08);
+        animation: fadeIn 1.2s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .floating {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-18px);
+        }
+    }
+
+    .input-premium {
+        transition: box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .input-premium:focus {
+        box-shadow: 0 0 0 3px #22d3ee, 0 0 0 8px #16a34a22;
+        border-color: #22d3ee;
+    }
+
+    .btn-premium {
+        transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+        box-shadow: 0 2px 12px 0 rgba(34, 211, 238, 0.15);
+    }
+
+    .btn-premium:hover {
+        background: linear-gradient(90deg, #22d3ee 0%, #16a34a 100%);
+        box-shadow: 0 6px 24px 0 rgba(34, 211, 238, 0.25);
+        transform: translateY(-2px) scale(1.04);
+    }
+
+    .table-premium th {
+        background: linear-gradient(90deg, #22d3ee 0%, #16a34a 100%);
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+    }
+
+    .table-premium td {
+        background: rgba(30, 41, 59, 0.92);
+        transition: background 0.2s;
+    }
+
+    .table-premium tr:hover td {
+        background: rgba(34, 211, 238, 0.08);
+    }
+
+    .action-btn {
+        transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+    }
+
+    .action-btn:hover {
+        background: linear-gradient(90deg, #22d3ee 0%, #16a34a 100%);
+        box-shadow: 0 2px 12px 0 rgba(34, 211, 238, 0.18);
+        transform: scale(1.08);
+    }
+
+    .gradient-border {
+        border-image: linear-gradient(135deg, #22d3ee 0%, #16a34a 100%);
+        border-image-slice: 1;
+    }
+
+    .fade-in {
+        animation: fadeIn 1.2s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .pulse {
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+        0%,
+        100% {
+            box-shadow: 0 0 0 0 #22d3ee44;
+        }
+
+        50% {
+            box-shadow: 0 0 0 12px #22d3ee22;
+        }
+    }
+</style>
+</head>
+
+<body
+    class="bg-gradient-to-br from-cyan-900 via-gray-900 to-green-900 min-h-screen flex items-center justify-center text-white p-6">
+
+    <div class="w-full max-w-4xl p-10 rounded-3xl glass gradient-border shadow-2xl border-2 fade-in">
+        <div class="flex flex-col items-center mb-10">
+            <span class="floating text-6xl pulse">📍</span>
+            <h1
+                class="text-5xl font-extrabold text-center bg-gradient-to-r from-cyan-400 via-green-400 to-green-600 bg-clip-text text-transparent mt-4 mb-4 tracking-tight drop-shadow-lg">
+                 Endereços</h1>
+            <p class="text-lg text-gray-300 text-center max-w-xl">Gerencie seus endereços com uma experiência visual
+                única, fluida e sofisticada.</p>
+        </div>
+
+        <form id="formEndereco" class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14">
+            <input type="hidden" id="id" />
+
+            <div>
+                <label class="block mb-2 font-semibold text-cyan-300">Nome</label>
+                <input type="text" id="nome"
+                    class="input-premium w-full p-4 rounded-2xl bg-gray-900 text-white border-2 border-cyan-600 focus:outline-none focus:border-cyan-400 transition"
+                    placeholder="Seu nome" required />
+            </div>
+
+            <div>
+                <label class="block mb-2 font-semibold text-cyan-300">CEP</label>
+                <input type="text" id="cep" maxlength="8"
+                    class="input-premium w-full p-4 rounded-2xl bg-gray-900 text-white border-2 border-cyan-600 focus:outline-none focus:border-cyan-400 transition"
+                    placeholder="Ex: 01001000" required />
+            </div>
+
+            <div>
+                <label class="block mb-2 font-semibold text-cyan-300">Estado</label>
+                <input type="text" id="estado" readonly
+                    class="input-premium w-full p-4 rounded-2xl bg-gray-800 text-white border-2 border-gray-600" />
+            </div>
+
+            <div>
+                <label class="block mb-2 font-semibold text-cyan-300">Cidade</label>
+                <input type="text" id="cidade" readonly
+                    class="input-premium w-full p-4 rounded-2xl bg-gray-800 text-white border-2 border-gray-600" />
+            </div>
+
+            <div>
+                <label class="block mb-2 font-semibold text-cyan-300">Bairro</label>
+                <input type="text" id="bairro" readonly
+                    class="input-premium w-full p-4 rounded-2xl bg-gray-800 text-white border-2 border-gray-600" />
+            </div>
+
+            <div>
+                <label class="block mb-2 font-semibold text-cyan-300">Logradouro</label>
+                <input type="text" id="logradouro" readonly
+                    class="input-premium w-full p-4 rounded-2xl bg-gray-800 text-white border-2 border-gray-600" />
+            </div>
+
+            <div class="col-span-1 md:col-span-2 flex justify-end gap-6 mt-8">
+                <button type="reset"
+                    class="btn-premium px-8 py-3 bg-gray-700 hover:bg-gray-600 rounded-2xl font-semibold text-gray-200 shadow-lg">Limpar</button>
+                <button type="submit"
+                    class="btn-premium px-8 py-3 bg-gradient-to-r from-cyan-500 to-green-500 rounded-2xl font-bold text-white shadow-xl">Salvar</button>
+            </div>
+        </form>
+
+        <h2 class="text-3xl font-bold mb-8 text-cyan-300 tracking-tight">📄 Endereços cadastrados</h2>
+
+        <div class="overflow-x-auto rounded-2xl shadow-2xl">
+    <table class="w-full text-left border-collapse premium-table rounded-2xl overflow-hidden">
+        <thead>
+            <tr>
+                <th class="p-6">Nome</th>
+                <th class="p-6">CEP</th>
+                <th class="p-6">Cidade</th>
+                <th class="p-6">Bairro</th>
+                <th class="p-6 text-center">Ações</th>
+            </tr>
+        </thead>
+        <tbody id="listaEnderecos" class="divide-y divide-cyan-800 text-lg">
+            <tr>
+                <td colspan="5" class="p-6 text-center text-gray-400">Carregando endereços...</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5" class="p-6 text-center text-gray-400">Nenhum endereço cadastrado</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+        <div class="flex justify-center mt-10">
+            <span class="text-xs text-gray-500">Design premium por Marketool • 2025</span>
+        </div>
+    </div>
+    <script>
+        feather.replace();
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
