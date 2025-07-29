@@ -1,0 +1,171 @@
+# 🛒 TechStore Premium - Loja Virtual
+
+Uma loja virtual moderna e responsiva desenvolvida com HTML, CSS e JavaScript, oferecendo uma experiência de compra completa e intuitiva.
+
+![TechStore Premium](https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop&q=80)
+
+## 📋 Descrição do Projeto
+
+O TechStore Premium é uma loja virtual completa que simula um e-commerce real, com funcionalidades avançadas de carrinho de compras, sistema de favoritos, filtros de produtos, paginação e persistência de dados. O projeto foi desenvolvido com foco na experiência do usuário, oferecendo um design moderno e responsivo.
+
+## ✨ Funcionalidades
+
+### 🛍️ Principais Recursos
+- **Catálogo de Produtos**: Mais de 40 produtos organizados em categorias (Eletrônicos, Roupas, Casa & Jardim)
+- **Carrinho de Compras Avançado**: Adicionar, remover, alterar quantidades e persistência local
+- **Sistema de Favoritos**: Salvar produtos preferidos com contador dinâmico
+- **Busca Inteligente**: Pesquisa por nome, descrição, marca ou categoria
+- **Filtros e Ordenação**: Filtrar por categoria e ordenar por preço, nome ou estoque
+- **Paginação**: Navegação otimizada com 12 produtos por página
+- **Visualização Rápida**: Modal com detalhes do produto sem sair da página
+- **Finalização de Compra**: Simulação completa do processo de compra
+- **Controle de Estoque**: Atualização automática após compras
+
+### 🎨 Interface e UX
+- **Design Responsivo**: Adaptável para desktop, tablet e mobile
+- **Modo Grid/Lista**: Alternância entre visualizações
+- **Loading States**: Animações de carregamento para melhor UX
+- **Toast Notifications**: Feedback visual para ações do usuário
+- **Animações Suaves**: Transições e hover effects
+- **Breadcrumb Navigation**: Navegação contextual
+
+### 💾 Persistência de Dados
+- **LocalStorage**: Carrinho e favoritos salvos localmente
+- **Estado Persistente**: Dados mantidos entre sessões
+- **Sincronização**: Contadores atualizados automaticamente
+
+## 🚀 Tecnologias Utilizadas
+
+### Frontend
+- **HTML5**: Estrutura semântica e acessível
+- **CSS3**: Estilização avançada com Flexbox e Grid
+- **JavaScript ES6+**: Lógica de negócio e interatividade
+- **Tailwind CSS**: Framework CSS utilitário via CDN
+- **Font Awesome**: Ícones vetoriais
+- **Google Fonts**: Tipografia (Inter)
+
+### Recursos Externos
+- **Unsplash API**: Imagens de alta qualidade dos produtos
+- **Blob Storage**: Imagens customizadas específicas
+
+### Funcionalidades JavaScript
+- **Manipulação do DOM**: Criação dinâmica de elementos
+- **Event Handling**: Gerenciamento de eventos de usuário
+- **Local Storage API**: Persistência de dados local
+- **Array Methods**: Filtros, ordenação e manipulação de dados
+- **Async/Await**: Simulação de operações assíncronas
+- **Modular Functions**: Código organizado e reutilizável
+
+## 📦 Como Executar o Projeto
+
+### Pré-requisitos
+- Navegador web moderno (Chrome, Firefox, Safari, Edge)
+- Conexão com internet (para CDNs e imagens)
+
+### Passos para Execução
+
+1. **Clone ou baixe o projeto**
+   ```bash
+   git clone https://github.com/seu-usuario/techstore-premium.git
+   cd techstore-premium
+   ```
+
+2. **Estrutura de arquivos necessária**
+   ```
+   techstore-premium/
+   ├── index.html
+   ├── style.css
+   ├── script.js
+   └── README.md
+   ```
+
+3. **Abra o projeto**
+   - Opção 1: Clique duas vezes no arquivo `index.html`
+   - Opção 2: Arraste o arquivo `index.html` para o navegador
+   - Opção 3: Use um servidor local (recomendado)
+
+4. **Usando servidor local (opcional)**
+   ```bash
+   # Com Python
+   python -m http.server 8000
+   
+   # Com Node.js (http-server)
+   npx http-server
+   
+   # Com PHP
+   php -S localhost:8000
+   ```
+
+5. **Acesse no navegador**
+   - Arquivo local: `file:///caminho/para/index.html`
+   - Servidor local: `http://localhost:8000`
+
+
+## 📱 Screenshots das Telas
+
+### Tela Principal
+![Tela Principal](https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop&q=80)
+*Interface principal com catálogo de produtos e navegação*
+
+### Carrinho de Compras
+![Carrinho](https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=500&fit=crop&q=80)
+*Modal do carrinho com resumo do pedido e finalização*
+
+### Sistema de Favoritos
+![Favoritos](https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?w=800&h=500&fit=crop&q=80)
+*Lista de produtos favoritos do usuário*
+
+### Visualização Rápida
+![Quick View](https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=500&fit=crop&q=80)
+*Modal de visualização rápida com detalhes do produto*
+
+### Design Responsivo
+![Mobile](https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=600&fit=crop&q=80)
+*Interface adaptada para dispositivos móveis*
+
+## 🎯 Funcionalidades Detalhadas
+
+### Gerenciamento de Produtos
+- ✅ Catálogo com 40+ produtos reais
+- ✅ Categorização automática
+- ✅ Imagens de alta qualidade
+- ✅ Informações detalhadas (preço, estoque, avaliação)
+- ✅ Controle de estoque dinâmico
+
+### Sistema de Carrinho
+- ✅ Adicionar/remover produtos
+- ✅ Alterar quantidades
+- ✅ Cálculo automático de totais
+- ✅ Frete grátis acima de R$ 299
+- ✅ Validação de estoque
+- ✅ Persistência entre sessões
+
+### Busca e Filtros
+- ✅ Busca em tempo real
+- ✅ Filtros por categoria
+- ✅ Ordenação múltipla
+- ✅ Resultados paginados
+- ✅ Contador de resultados
+
+### Interface do Usuário
+- ✅ Design moderno e limpo
+- ✅ Animações suaves
+- ✅ Feedback visual
+- ✅ Loading states
+- ✅ Notificações toast
+- ✅ Modais responsivos
+
+## 👨‍💻 Autor
+
+Desenvolvido com ❤️ por [Juan]
+
+## 📞 Contato
+
+- Email: seu.email@exemplo.com
+- LinkedIn: [Seu LinkedIn](https://linkedin.com/in/juan-de-borba)
+- GitHub: [Seu GitHub](https://github.com/JuanCristian08)
+
+---
+
+⭐ Se este projeto te ajudou, considere dar uma estrela no repositório!
+```
