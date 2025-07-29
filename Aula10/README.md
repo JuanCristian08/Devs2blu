@@ -66,8 +66,8 @@ O TechStore Premium é uma loja virtual completa que simula um e-commerce real, 
 
 1. **Clone ou baixe o projeto**
    ```bash
-   git clone https://github.com/seu-usuario/techstore-premium.git
-   cd techstore-premium
+   git clone https://github.com/JuanCristian08/Devs2Blu.git
+   cd Aula10
    ```
 
 2. **Estrutura de arquivos necessária**
