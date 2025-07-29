@@ -2,7 +2,7 @@
 
 Uma loja virtual moderna e responsiva desenvolvida com HTML, CSS e JavaScript, oferecendo uma experiência de compra completa e intuitiva.
 
-![TechStore Premium](https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop&q=80)
+![TechStore Premium](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-23sdF51Imb7JrmV5Hn5YeeWDBnWjea.png)
 
 ## 📋 Descrição do Projeto
 
@@ -84,19 +84,7 @@ O TechStore Premium é uma loja virtual completa que simula um e-commerce real, 
    - Opção 2: Arraste o arquivo `index.html` para o navegador
    - Opção 3: Use um servidor local (recomendado)
 
-4. **Usando servidor local (opcional)**
-   ```bash
-   # Com Python
-   python -m http.server 8000
-   
-   # Com Node.js (http-server)
-   npx http-server
-   
-   # Com PHP
-   php -S localhost:8000
-   ```
-
-5. **Acesse no navegador**
+4. **Acesse no navegador**
    - Arquivo local: `file:///caminho/para/index.html`
    - Servidor local: `http://localhost:8000`
 
@@ -104,23 +92,23 @@ O TechStore Premium é uma loja virtual completa que simula um e-commerce real, 
 ## 📱 Screenshots das Telas
 
 ### Tela Principal
-![Tela Principal](https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop&q=80)
+![Tela Principal](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-23sdF51Imb7JrmV5Hn5YeeWDBnWjea.png)
 *Interface principal com catálogo de produtos e navegação*
 
 ### Carrinho de Compras
-![Carrinho](https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=500&fit=crop&q=80)
+![Carrinho](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-raNpTcVg5G6UuFc1rNwSyZjDnXW9Tt.png)
 *Modal do carrinho com resumo do pedido e finalização*
 
 ### Sistema de Favoritos
-![Favoritos](https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?w=800&h=500&fit=crop&q=80)
+![Favoritos](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-hm8BY6NUVfklsHzbkoZUfo6ikxB5Wg.png)
 *Lista de produtos favoritos do usuário*
 
 ### Visualização Rápida
-![Quick View](https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=500&fit=crop&q=80)
+![Quick View](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XhyB9SYC4w1V2cHSTXqkb4RA4tqxMI.png)
 *Modal de visualização rápida com detalhes do produto*
 
 ### Design Responsivo
-![Mobile](https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=600&fit=crop&q=80)
+![Mobile](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-x06ambiBQgGTlPOetYnxnDjxIZoj2S.png)
 *Interface adaptada para dispositivos móveis*
 
 ## 🎯 Funcionalidades Detalhadas
